@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+     public static int number(int power){
+            int sum=0;
+            int rem;
+            while(power!=0){
+                rem = power%10;
+                sum = sum+ rem ; 
+                power/=10;
+            }
+            return sum;
+        }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+       Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int power = n*n;
+        int sum = number(power);
+        
+        if(sum == n)
+            System.out.println("true");
+        else 
+            System.out.println("false");
+        
+    }
+}
