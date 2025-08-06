@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int findSum(int n){
+        int sum = 0;
+        while(n!=0){
+            int num = n%10;
+            sum = sum+num;
+            n/=10;
+        }
+        return sum;
+        
+    }
+    
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int n =scan.nextInt();
+        int sum = findSum(n);
+        
+        if(n%sum==0)
+            System.out.println("Harshad Number");
+        else
+            System.out.println("Not Harshad Number");
+        
+    }
+}
